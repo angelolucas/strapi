@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "tests",
+  "info": {
+    "name": "test",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "time"
+    },
+    "password": {
+      "type": "password"
+    },
+    "body": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing-page",
+  "info": {
+    "name": "LandingPage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.header"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.o-que-iremos-construir"
+    }
+  }
+}
