@@ -5,4 +5,16 @@
  * to customize this model
  */
 
-module.exports = {};
+ const axios = require('axios');
+ const netlifyWebhook = 'https://api.netlify.com/build_hooks/605a774d941fd700b79863f0';
+
+ module.exports = {
+   lifecycles: {
+     async afterCreate(_, __) {
+       netlifyWebhook && axios.post(netlifyWebhook);
+     },
+     async afterUpdate(_, __, ___) {
+       netlifyWebhook && axios.post(netlifyWebhook);
+     },
+   },
+ };
